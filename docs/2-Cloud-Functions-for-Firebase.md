@@ -1,6 +1,17 @@
 # Cloud Functions for Firebase
 
+## Important links
 
+### Codelabs
+- [Codelab: Firebase Web Codelab](https://codelabs.developers.google.com/codelabs/firebase-web/).
+- [Codelab: Cloud Functions for Firebase](https://codelabs.developers.google.com/codelabs/firebase-cloud-functions/)
+
+### Google code on github
+- [Code on Github](https://github.com/firebase/friendlychat-web)
+
+### Live project on firebase
+- Project on Firebase Console: friendlychat2-3c045
+- The completed project is deployed at [this url](https://friendlychat2-3c045.firebaseapp.com/)
 
 ## 1. Overview
 

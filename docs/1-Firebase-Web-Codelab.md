@@ -1,16 +1,17 @@
 # Firebase Web Codelab
 
-
-
 ## Important links
 
+### Codelabs
+- [Codelab: Firebase Web Codelab](https://codelabs.developers.google.com/codelabs/firebase-web/).
+- [Codelab: Cloud Functions for Firebase](https://codelabs.developers.google.com/codelabs/firebase-cloud-functions/)
+
+### Google code on github
 - [Code on Github](https://github.com/firebase/friendlychat-web)
+
+### Live project on firebase
 - Project on Firebase Console: friendlychat2-3c045
 - The completed project is deployed at [this url](https://friendlychat2-3c045.firebaseapp.com/)
-
-
-
-
 
 ## 1. Overview
 
@@ -33,10 +34,6 @@ In this codelab, you'll learn how to use the [Firebase platform](http://firebase
 - A browser such as Chrome.
 - The sample code. See next step for
 
-
-
-
-
 ## 2. Get the sample code
 
 Clone the [GitHub repository](https://github.com/firebase/friendlychat-web) from the command line:
@@ -55,8 +52,6 @@ The `friendlychat-web` repository contains sample projects for multiple platform
 ### Import the starter app
 
 Using your IDE open or import the 📁 `web-start` directory from the sample code directory. This directory contains the starting code for the codelab which consists of fully functional Chat Web App.
-
-
 
 ## 3. Create a Firebase project and Set up your project
 
@@ -106,10 +101,6 @@ Then click **Got It** when you receive the disclaimer about the security rules. 
 
 ![img](https://codelabs.developers.google.com/codelabs/firebase-web/img/328ca996218b2e41.png)
 
-
-
-
-
 ## 4. Install the Firebase Command Line Interface
 
 The Firebase Command Line Interface (CLI) will allow you to serve your web apps locally and deploy your web app to Firebase hosting.
@@ -146,19 +137,15 @@ firebase use --add
 
 You will be prompted to select your Project ID. Follow the instructions.
 
-> SM 
+> SM
 >
 > ```bash
 > ? Which project do you want to add? friendlychat-3d697
 > ? What alias do you want to use for this project? (e.g. staging) staging
-> 
+>
 > Created alias staging for friendlychat-3d697.
 > Now using alias staging (friendlychat-3d697)
 > ```
->
->
-
-
 
 ## 5. Run the starter app
 
@@ -180,11 +167,7 @@ We're using the [Firebase hosting](https://firebase.google.com/docs/hosting/) em
 
 The app cannot do anything right now but with your help it will soon! We only have laid out the UI for you so far. Let's now build a realtime chat!
 
-
-
 > SM the layout, CSS and image icon are screwed up at this point.
-
-
 
 ## 6. Import and Configure Firebase
 
@@ -218,7 +201,7 @@ This script contains your project configuration based of the project that you ha
 
 Feel free to inspect that file to see what your project configuration looks like. For this open <http://localhost:5000/__/firebase/init.js> and you should see something that looks like this:
 
-### [/__/firebase/init.js](https://friendlychat-1234.firebaseapp.com/__/firebase/init.js)
+### [/\_\_/firebase/init.js](https://friendlychat-1234.firebaseapp.com/__/firebase/init.js)
 
 ```
 if (typeof firebase === 'undefined') throw new Error('hosting/init-error: Firebase SDK not detected. You must include it before /__/firebase/init.js');
@@ -237,8 +220,6 @@ Instead of using the locally available implicit configuration that's generated b
 ![img](https://codelabs.developers.google.com/codelabs/firebase-web/img/36f835c9da595e23.png)
 
 You should use that especially if you are using your own hosting server rather than Firebase Hosting.
-
-
 
 ## 7. User Sign-in
 
@@ -323,14 +304,7 @@ function isUserSignedIn() {
 3. After Signing in the profile pic and name of the user should be displayed:
 4. ![img](https://codelabs.developers.google.com/codelabs/firebase-web/img/8856f18e295de3f2.png)
 
-
-
 > SM - again the profile pic isn't showing and the layout is broken
-> 
-
-
-
-
 
 ## 8. Read messages
 
@@ -402,10 +376,6 @@ The callback function - `callback` - is specified using the `.on` function and b
 2. The sample messages we imported earlier into the database should be displayed in the Friendly-Chat UI (see below). You can also manually modify or add new messages directly from the **Database** section of the Firebase console. Congratulations, you are reading real-time database entries in your app!
    ![img](https://codelabs.developers.google.com/codelabs/firebase-web/img/af5bbc17f5c16d85.png)
 
-
-
-
-
 ## 9. Send Messages
 
 ### **Implement Message Sending**
@@ -434,11 +404,7 @@ function saveMessage(messageText) {
 2. After signing-in, enter a message and hit the send button, the new message should be visible in the app UI and in the Firebase console with your user photo and name:
    ![img](https://codelabs.developers.google.com/codelabs/firebase-web/img/5525d51569916a34.png)
 
-
-
 > SM - ok can send a message
-
-
 
 ## 10. Send Images
 
@@ -491,19 +457,13 @@ function saveImageMessage(file) {
 
 2. After signing-in, click the image upload button:![img](https://codelabs.developers.google.com/codelabs/firebase-web/img/a5941d3daaa70956.png) and select an image file using the file picker, a new message should be visible in the app UI with your selected image:
 
-3. > SM -  That image icon isn't showing up....
+3. > SM - That image icon isn't showing up....
 
 4. ![img](https://codelabs.developers.google.com/codelabs/firebase-web/img/eb22bdc11ce003e0.png)
 
 5. If you try adding an image while not signed-in you should see a Toast telling you that you must sign in in order to add images.
 
-
-
-
-
-> SM - can't upload when not logged in...  ok
-
-
+> SM - can't upload when not logged in... ok
 
 ## 11. Show Notifications
 
@@ -605,13 +565,9 @@ function requestNotificationsPermissions() {
    `Got FCM device token: cWL6w:APA91bHP...4jDPL_A-wPP06GJp1OuekTaTZI5K2Tu`
 4. Copy your device token, you will need it for the next step.
 
-
-
 ### **Send a notification to your device**
 
 Now that you have your device token you can send a notification. You will also need your Firebase app's **Server Key**. to get it open your app's [**Firebase Console > Project Settings > Cloud Messaging**](https://console.firebase.google.com/project/_/settings/cloudmessaging) and copy the **Server Key**.
-
-
 
 To send a notification you need to send the following HTTP request:
 
@@ -634,8 +590,6 @@ Authorization: key=YOUR_SERVER_KEY
 
 You can do this by using [cURL](https://curl.haxx.se/) using the following command line:
 
-
-
 ```
 curl -H "Content-Type: application/json" \
      -H "Authorization: key=YOUR_SERVER_KEY" \
@@ -650,8 +604,6 @@ curl -H "Content-Type: application/json" \
          }' \
      https://fcm.googleapis.com/fcm/send
 ```
-
-
 
 Don't forget to replace `YOUR_SERVER_KEY` and `YOUR_DEVICE_TOKEN` with your **Server Key** and your **Device Token**.
 
@@ -669,11 +621,7 @@ If your app is on the background you should see a notification appear such as:
 
 In the follow-up codelab [**Firebase SDK for Cloud Functions**](https://codelabs.developers.google.com/codelabs/firebase-cloud-functions) we'll see how you can automate sending notifications from a backend for each new messages posted in the chat.
 
-
-
 > SM - ok seems to be working
-
-
 
 ## 12. Database Security Rules [Optional]
 
@@ -773,15 +721,7 @@ i  database: releasing rules...
 Project Console: https://console.firebase.google.com/project/friendlychat-1234/overview
 ```
 
-
-
-
-
 > SM - ok
-
-
-
-
 
 ## 13. Storage Security Rules [Optional]
 
@@ -871,10 +811,6 @@ i  storage: uploading rules storage.rules...
 
 Project Console: https://console.firebase.google.com/project/friendlychat-1234/overview
 ```
-
-
-
-
 
 ## 14. Deploy your app using Firebase static hosting
 
