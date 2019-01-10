@@ -7,6 +7,8 @@
 - [Codelab: Firebase Web Codelab](https://codelabs.developers.google.com/codelabs/firebase-web/).
 - [Codelab: Cloud Functions for Firebase](https://codelabs.developers.google.com/codelabs/firebase-cloud-functions/)
 
+![App Screenshot](https://raw.githubusercontent.com/smerth/node-chat-app-demonstrating-google-cloud-functions/master/screenshot.png)
+
 ### Google code on github
 
 - [Code on Github](https://github.com/firebase/friendlychat-web)
@@ -31,3 +33,10 @@ Google Cloud Functions:
 - A new message noification bot is implemented
 
 The docs folder contains notes for both code labs.
+
+- Firebase Authentication to easily allow your users to sign into your app.
+- Firebase Realtime Database to save structured data on the cloud and get instant notification when data changes.
+- Cloud Storage for Firebase to save files in the cloud.
+  Firebase Hosting to host and serve your assets.
+- Firebase Cloud Messaging to send push notifications and display browser popup notifications.
+- Google Cloud Function to automatically blur objectionable images.
